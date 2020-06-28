@@ -10,8 +10,12 @@ pip3 install cloudinary-cli
 ```
 Installation:
 Install the Cloudydesktop application:
-- Mac: download cloudysesktop-darwin-x64.zip, unzip and run cloudydesktop.app
-- Windows: download cloudysesktop-win-x64.zip, unzip and run cloudydesktop.exe
+- Download the Cloudydesktop Repo from github to your local directory
+- From cloudydesktop directory run the command line
+```bash
+npm run make
+```
+
 Configuration:
 Run the Cloudydesktop application, set your Cloudinary account details (cloud name, API key and API secret) and save them.
 Select the local folder you want to upload to Cloudinary and the Cloudinary folder name in which files will be stored.
