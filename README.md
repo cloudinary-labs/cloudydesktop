@@ -8,6 +8,16 @@ Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is require
 ```bash
 pip3 install cloudinary-cli
 ```
+
+Node and npm are required to be installed as well, to confirm that run:
+```bash
+# This command should print the version of Node.js
+node -v
+
+# This command should print the version of npm
+npm -v
+```
+
 Installation:
 
 ```bash
