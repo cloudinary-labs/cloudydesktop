@@ -56,13 +56,13 @@ function startWatcher(data) {
 function runCliSync(localPath, cldPath) {
   if (!cliSyncRunning) {
     startSync();
-    const cld = spawn("/usr/local/bin/cld", [
+    const cld = spawn("cld", [
       "sync",
       "--push",
       "--force",
       localPath,
-      rootCldDir + cldPath,
-    ]);
+      (rootCldDir + cldPath)],
+      {shell: process.platform == 'win32'});
 
     cld.stdout.on("data", (data) => {
       console.log(`stdout: ${data}`);

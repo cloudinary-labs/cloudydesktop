@@ -2,33 +2,39 @@
 Desktop application that uses Cloudinary's CLI to automatically sync a local folder to a Cloudinary folder.
 # installing
 Requirements:
-Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is required, to install it:
-- Install [Python](https://www.python.org) version 3.6 or later.
-- To install the Cloudinary CLI, open terminal (Mac) or command line (Windows) and run:
-```bash
-pip3 install cloudinary-cli
-```
 
-Node and npm are required to be installed as well, to confirm that run:
+[Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
+To confirm they are installed run (on Mac use terminal, on windows use powershell):
 ```bash
 # This command should print the version of Node.js
-node -v
+% node -v
 
 # This command should print the version of npm
-npm -v
+% npm -v
+
+# This command should print the version of git
+% git -v
+```
+
+Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is required, to install it:
+- Install [Python](https://www.python.org) version 3.6 or later.
+- To install the Cloudinary CLI, run (on Mac use terminal, on windows use powershell):
+```bash
+pip3 install cloudinary-cli
 ```
 
 Installation:
 
 ```bash
 # Clone the cloudydesktop repository
-$ git clone https://github.com/cloudinary-labs/cloudydesktop
+% git clone https://github.com/cloudinary-labs/cloudydesktop
 
 # Go into the repository
-$ cd cloudydesktop
+% cd cloudydesktop
 
 # Install the dependencies and run
-$ npm install && npm start
+% npm install
+% npm start
 ```
 
 Configuration:
