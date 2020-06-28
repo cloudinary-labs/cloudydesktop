@@ -15,6 +15,7 @@ Install the Cloudydesktop application:
 Configuration:
 Run the Cloudydesktop application, set your Cloudinary account details (cloud name, API key and API secret) and save them.
 Select the local folder you want to upload to Cloudinary and the Cloudinary folder name in which files will be stored.
+
 Notes:
 - Files are uploaded as public to Cloudinary.
 - The Cloudinary folder you set will be created under cloudydesktop folder in Cloudinary (and not under the root directory).
