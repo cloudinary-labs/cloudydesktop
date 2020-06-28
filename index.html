@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+  <title>Cloudydesktop</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="banner" style="background-color: #0071ba;">
+    <div class="windowpad">
+      <img src="images/cloudinary_logo.png" height="55px" width="65px" align="left" style="padding-right: 10px;" />
+      <h1>Cloudydesktop</h1>
+    </div>
+  </div>
+
+  <div class="windowpad">
+    <div class="main-area">
+      <div class="nobox">
+        <h3>Account Details</h3>
+
+        <div class="item">
+          <div class="label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+              </svg>Cloud name:
+          </div>
+          <input class="input-field" id="cloudName" type="text" value="" />
+        </div>
+        <div class="item">
+          <div class="label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+            </svg>
+            API key:
+          </div>
+          <input class="input-field" id="apiKey" type="password" value="" />
+        </div>
+        <div class="item">
+          <div class="label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+            </svg>
+            API secret:
+          </div>
+
+          <input class="input-field" type="password" id="apiSecret" value="" type="text" />
+        </div>
+        <div class="item" align="left">
+          <button type="button" id="saveKeys" class="md-btn md-btn-raised md-btn-ripple md-btn-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" />
+            </svg>
+            Save
+          </button>
+        </div>
+
+        <p>&nbsp;</p>
+        <p></p>
+      </div>
+
+      <div class="box">
+        <h3>Configuration</h3>
+        <div class="item">
+          <div class="label">Local path:</div>
+          <input class="input-field" id="localFolderPath" type="text" />
+        </div>
+        <div class="item">
+          <button class="md-btn md-btn-ripple" type="button" id="selectDirectory">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+            Select Directory
+          </button>
+        </div>
+        <div class="item">
+          <div class="label">
+            Cloudinary path: (will be located at cloudydesktop/)
+          </div>
+          <input class="input-field" id="cloudinaryPath" type="text" />
+        </div>
+        <div class="item">
+          <div class="label">
+            Mirror local folder to a Cloudinary folder (delete as well).
+          </div>
+        </div>
+        <div class="item">
+          <button id="myBtn" type="button" npm class="md-btn md-btn-ripple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+              <animateTransform attributeType="xml" id="animateSvg" attributeName="transform" type="rotate"
+                from="360 0 0" to="0 0 0" dur="5s" additive="sum" repeatCount="indefinite" begin="indefinite" />
+            </svg>
+            Sync Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
