@@ -4,7 +4,7 @@ const store = new Store();
 const keytar = require("keytar");
 const os = require("os");
 const placeHolder = "***************************";
-var watcher = require("./local.js");
+var watcher = require("./renderer/local.js");
 var appName = "appName";
 const keytarAccount = os.userInfo().username;
 
