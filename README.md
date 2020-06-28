@@ -22,5 +22,6 @@ Notes:
 - Files deleted from your local folder will be deleted from the Cloudinary folder as well.
 
 Running:
+
 To start the sync operation click Sync Now, if all is well the button will show Sync On and the sync icon will keep rotating. After performing an initial sync the application will continue to monitor changes done to your local folder and it will update the Cloudinary folder with changes automatically.
 
