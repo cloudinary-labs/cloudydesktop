@@ -9,7 +9,7 @@ Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is require
 pip3 install cloudinary-cli
 ```
 Installation:
-Install the Cloudydesktop application:
+
 - Download the Cloudydesktop Repo from github to your local directory
 - From cloudydesktop directory run the command line
 ```bash
@@ -17,10 +17,12 @@ npm run make
 ```
 
 Configuration:
+
 Run the Cloudydesktop application, set your Cloudinary account details (cloud name, API key and API secret) and save them.
 Select the local folder you want to upload to Cloudinary and the Cloudinary folder name in which files will be stored.
 
 Notes:
+
 - Files are uploaded as public to Cloudinary.
 - The Cloudinary folder you set will be created under cloudydesktop folder in Cloudinary (and not under the root directory) so that there are less chances of messing up an existing folder.
 - Files deleted from your local folder will be deleted from the Cloudinary folder as well.
