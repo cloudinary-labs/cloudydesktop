@@ -10,10 +10,15 @@ pip3 install cloudinary-cli
 ```
 Installation:
 
-- Download the Cloudydesktop Repo from github to your local directory
-- From cloudydesktop directory run the command line
 ```bash
-npm run make
+# Clone the cloudydesktop repository
+$ git clone https://github.com/cloudinary-labs/cloudydesktop
+
+# Go into the repository
+$ cd cloudydesktop
+
+# Install the dependencies and run
+$ npm install && npm start
 ```
 
 Configuration:
