@@ -6,13 +6,9 @@ Requirements:
 [Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
 To confirm they are installed run (on Mac use terminal, on windows use powershell):
 ```bash
-# This command should print the version of Node.js
+# These commands should print the version of each process when they are installed
 % node -v
-
-# This command should print the version of npm
 % npm -v
-
-# This command should print the version of git
 % git -v
 ```
 
@@ -23,7 +19,7 @@ Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is require
 pip3 install cloudinary-cli
 ```
 
-Installation:
+Cloudydesktop compile and run:
 
 ```bash
 # Clone the cloudydesktop repository
@@ -46,7 +42,7 @@ Notes:
 
 - Files are uploaded as public to Cloudinary.
 - The Cloudinary folder you set will be created under cloudydesktop folder in Cloudinary (and not under the root directory) so that there are less chances of messing up an existing folder.
-- Files deleted from your local folder will be deleted from the Cloudinary folder as well.
+- When the sync is running, files deleted from your local folder will be deleted from the Cloudinary folder as well.
 
 Running:
 
