@@ -41,7 +41,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "/Users/hadar/Dev/electron/fly/images/macos-icon-round.icns"
+        "icon": "assets/app-icon/icon"
       },
       "makers": [
         {
