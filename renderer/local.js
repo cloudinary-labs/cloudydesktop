@@ -101,7 +101,7 @@ function stopSync(code) {
     code == 0 ? "Sync On" : "Sync Error"
   );
   myBtn.innerHTML = label;
-  document.getElementById("animateSvg").setAttribute("begin", "0s");
+  document.getElementById("animateSvg").setAttribute("begin", (code == 0 ? "0s" : "indefinite"));
 }
 
 module.exports = function (data) {
