@@ -10,6 +10,7 @@ const keytarAccount = os.userInfo().username;
 
 const selectDirBtn = document.getElementById("selectDirectory");
 const saveKeysBtn = document.getElementById("saveKeys");
+const runSyncBtn = document.getElementById("myBtn");
 
 selectDirBtn.addEventListener("click", async function (event) {
   const data = await ipcRenderer.invoke("open-file-dialog");
@@ -17,16 +18,19 @@ selectDirBtn.addEventListener("click", async function (event) {
 });
 
 saveKeysBtn.addEventListener("click", function (event) {
-  saveKeysForm();
+  saveForm();
 });
 
-document.getElementById("myBtn").addEventListener("click", start);
+runSyncBtn.addEventListener("click", function (event) {
+  saveForm();
+  start();
+});
 
 async function getAppName() {
   appName = await ipcRenderer.invoke("app-name");
 }
 
-function saveKeysForm() {
+function saveForm() {
   store.set("cloudName", document.getElementById("cloudName").value);
   store.set("apiKey", document.getElementById("apiKey").value);
   setPassword(document.getElementById("apiSecret").value);

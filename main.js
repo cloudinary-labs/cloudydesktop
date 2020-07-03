@@ -9,11 +9,10 @@ function createWindow() {
     resizable: false,
     webPreferences: {
       nodeIntegration: true,
-      enableRemoteModule: true,
-      devTools: false
-    },
+      enableRemoteModule: true
+    }, //      devTools: false
   });
-//  win.webContents.openDevTools();
+  //  win.webContents.openDevTools();
   win.loadURL(`file://${__dirname}/index.html`);
 }
 
