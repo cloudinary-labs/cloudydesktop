@@ -1,12 +1,22 @@
 const { spawn } = require("child_process");
 var cliSyncRunning = false;
 const rootCldDir = "cloudydesktop/";
+const cliMacPath = "/usr/local/bin";
+
+function setEnvPath(data) {
+  process.env.CLOUDINARY_URL =
+    "cloudinary://" + data.apiKey + ":" + data.apiSecret + "@" + data.cldName;
+
+  if (process.platform === "darwin" && !process.env.PATH.includes(cliMacPath)){
+    process.env.PATH += (":" + cliMacPath);
+  }
+  console.log("start watching ", data.localPath);
+  console.log("environment ", process.env.PATH);
+}
 
 function startWatcher(data) {
   var chokidar = require("chokidar");
-  process.env.CLOUDINARY_URL =
-    "cloudinary://" + data.apiKey + ":" + data.apiSecret + "@" + data.cldName;
-  console.log("start watching ", data.localPath);
+  setEnvPath(data);
 
   var watcher = chokidar.watch(data.localPath, {
     ignored: /[\/\\]\./,
