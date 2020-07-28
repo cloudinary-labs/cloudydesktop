@@ -28,9 +28,15 @@ Cloudydesktop compile and run:
 # Go into the repository
 % cd cloudydesktop
 
-# Install the dependencies and run
+# Get the dependencies and run the app from the local folder
 % npm install
 % npm start
+
+# Build an app and install it on your machine
+% npm run make
+% cd out/cloudydesktop-<os-name>
+# On windows create a shortcut to the .exe file in the folder
+# On Mac copy the .app in the folder to your Computer Applications folder
 ```
 
 Configuration:
