@@ -17,6 +17,7 @@ function setEnvPath(data) {
 function startWatcher(data) {
   var chokidar = require("chokidar");
   setEnvPath(data);
+  disableFolderSelection();
 
   var watcher = chokidar.watch(data.localPath, {
     ignored: /[\/\\]\./,
@@ -117,7 +118,20 @@ function stopSync(code) {
   }
   else {
     document.getElementById("mySvg").pauseAnimations();
+    enableFolderSelection();
   }
+}
+
+function disableFolderSelection() {
+  document.getElementById("selectDirectory").disabled = true;
+  document.getElementById("selectDirectory").style.backgroundColor = "DarkGray";
+  document.getElementById("cloudinaryPath").disabled = true;
+}
+
+function enableFolderSelection() {
+  document.getElementById("selectDirectory").disabled = false;
+  document.getElementById("selectDirectory").style.backgroundColor = "#0078ff";
+  document.getElementById("cloudinaryPath").disabled = false;
 }
 
 module.exports = function (data) {
