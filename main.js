@@ -21,7 +21,9 @@ const dockMenu = Menu.buildFromTemplate([
 
 function startApp() {
   createWindow();
-  app.dock.setMenu(dockMenu);
+  if (process.platform === "darwin") {
+    app.dock.setMenu(dockMenu);
+  }
 }
 
 function createWindow() {
