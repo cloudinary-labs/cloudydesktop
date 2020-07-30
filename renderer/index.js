@@ -30,6 +30,11 @@ async function getAppName() {
   appName = await ipcRenderer.invoke("app-name");
 }
 
+ipcRenderer.on('stop-sync', function(event) {
+  console.log("ipcRenderer stop-sync");
+  watcher.stopWatcher();
+});
+
 function saveForm() {
   store.set("cloudName", document.getElementById("cloudName").value);
   store.set("apiKey", document.getElementById("apiKey").value);
@@ -99,7 +104,7 @@ function start() {
       apiSecret: result,
       cldName: getCldName(),
     };
-    watcher(data);
+    watcher.startWatcher(data);
   });
 }
 

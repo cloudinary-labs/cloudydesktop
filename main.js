@@ -1,7 +1,6 @@
 const { app, Menu, BrowserWindow, ipcMain, dialog } = require("electron");
 
 let win = null;
-var syncEnabled = true;
 
 //Mac only stop sync option in dock menu
 const dockMenu = Menu.buildFromTemplate([
@@ -9,12 +8,7 @@ const dockMenu = Menu.buildFromTemplate([
     label: "Stop Sync",
     click() {
       console.log("Stop Sync");
-      if (win) {
-        syncEnabled = false;
-        win.close();
-        syncEnabled = true;
-        win = null;
-      }
+      win.webContents.send("stop-sync");
     }
   }
 ]);
@@ -40,7 +34,7 @@ function createWindow() {
   win.loadURL(`file://${__dirname}/index.html`);
   // On Mac window close hide it and close it on quit
   win.on('close', (event) => {
-    if (!app.quitting && syncEnabled) {
+    if (!app.quitting) {
       event.preventDefault();
       win.hide();
     }

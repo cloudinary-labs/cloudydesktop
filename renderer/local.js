@@ -2,6 +2,7 @@ const { spawn } = require("child_process");
 var cliSyncRunning = false;
 const rootCldDir = "cloudydesktop/";
 const cliMacPath = "/usr/local/bin";
+let watcher = null;
 
 function setEnvPath(data) {
   process.env.CLOUDINARY_URL =
@@ -18,8 +19,9 @@ function startWatcher(data) {
   var chokidar = require("chokidar");
   setEnvPath(data);
   disableFolderSelection();
+  stopWatcher();
 
-  var watcher = chokidar.watch(data.localPath, {
+  watcher = chokidar.watch(data.localPath, {
     ignored: /[\/\\]\./,
     persistent: true,
     ignoreInitial: true,
@@ -62,6 +64,16 @@ function startWatcher(data) {
       // This event should be triggered everytime something happens.
       console.log("Raw event info:", event, path, details);
     });
+}
+
+function stopWatcher() {
+  if(watcher) {
+      watcher.close().then(() => {
+        console.log("stopWatcher closed");
+        stopSync(999);
+      });
+      watcher = null;
+  }
 }
 
 function runCliSync(localPath, cldPath) {
@@ -109,7 +121,7 @@ function stopSync(code) {
   const regex = new RegExp("Sync (Run|On|Now|Error)");
   const label = myBtn.innerHTML.replace(
     regex,
-    code == 0 ? "Sync On" : "Sync Error"
+    getSyncStatus(code)
   );
   myBtn.innerHTML = label;
   document.getElementById("animateSvg").setAttribute("begin", "0s");
@@ -119,6 +131,18 @@ function stopSync(code) {
   else {
     document.getElementById("mySvg").pauseAnimations();
     enableFolderSelection();
+  }
+}
+
+function getSyncStatus(code) {
+  if (code == 0) {
+    return "Sync On"; 
+  }
+  else if (code == 999) {
+    return "Sync Now"; 
+  }
+  else  { 
+    return "Sync Error"; 
   }
 }
 
@@ -134,6 +158,7 @@ function enableFolderSelection() {
   document.getElementById("cloudinaryPath").disabled = false;
 }
 
-module.exports = function (data) {
-  startWatcher(data);
+module.exports = {
+  startWatcher,
+  stopWatcher
 };
