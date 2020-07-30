@@ -1,5 +1,5 @@
 # cloudydesktop
-Desktop application that uses Cloudinary's CLI to automatically sync a local folder to a Cloudinary folder.
+Desktop application that uses Cloudinary's CLI to automatically sync a local folder (and it subfolders) to a Cloudinary folder.
 # installing
 Requirements:
 
@@ -52,5 +52,5 @@ Notes:
 
 Running:
 
-To start the sync operation click Sync Now, if all is well the button will show Sync On and the sync icon will keep rotating. After performing an initial sync the application will continue to monitor changes done to your local folder and it will update the Cloudinary folder with changes automatically.
+To start the sync operation click Sync Now, if all is well the button will show Sync On and the sync icon will keep rotating. After performing an initial sync the application will continue to monitor changes done to your local folder and it will update the Cloudinary folder with changes automatically. Once the Sync is on you can no longer change the path of the local or cloudinary folders. To stop the Sync (or to change folders) exit the application. 
 
