@@ -22,7 +22,7 @@ function setThumbar() {
   win.setThumbarButtons([
     {
       tooltip: "Stop Sync",
-      icon: path.join(__dirname, "assets/app-icon/icon-idel.png"),
+      icon: path.join(__dirname, "assets/app-icon/icon-idel1.png"),
       click() {
         sendStopSync();
       }
