@@ -19,20 +19,12 @@ const dockMenu = Menu.buildFromTemplate([
 function setThumbar() {
   win.setThumbarButtons([
     {
-      tooltip: "button1",
-      icon: path.join(__dirname, "button1.png"),
+      tooltip: "Stop Sync",
+      icon: path.join(__dirname, "/assets/app-icon/icon-idel.png"),
       click() {
-        console.log("button1 clicked");
-      },
-    },
-    {
-      tooltip: "button2",
-      icon: path.join(__dirname, "button2.png"),
-      flags: ["enabled", "dismissonclick"],
-      click() {
-        console.log("button2 clicked.");
-      },
-    },
+        console.log("Stop Sync on Win");
+      }
+    }
   ]);
 }
 
@@ -71,7 +63,7 @@ app.on("ready", startApp);
 app.on("will-navigate", function (event) {
   event.preventDefault();
 });
-// On Mac window close hide it and close it on quitn
+// On Mac window close hide it and close it on quit
 app.on('window-all-closed', () => {
   if (!isMac) {
     app.quit()
