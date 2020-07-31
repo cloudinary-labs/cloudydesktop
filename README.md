@@ -52,5 +52,9 @@ Notes:
 
 Running:
 
-To start the sync operation click Sync Now, if all is well the button will show Sync On and the sync icon will keep rotating. After performing an initial sync the application will continue to monitor changes done to your local folder and it will update the Cloudinary folder with changes automatically. Once the Sync is on you can no longer change the path of the local or cloudinary folders. To stop the Sync (or to change folders) exit the application. 
+To start the sync operation click Sync Now, if all is well the button will show Sync On and the sync icon will keep rotating. After performing an initial sync the application will continue to monitor changes done to your local folder and it will update the Cloudinary folder with changes automatically. Once the Sync is on you can no longer change the path of the local or cloudinary folders. 
+
+Stopping:
+
+To stop the Sync or to change folders call stop sync. On Mac it is in the dock menu and on Win it is in the taskbar thumbnail menu or exit the application. Closing the window, on Mac it leaves the app running and on Win the application exits. To close the app on Mac select quit on the dock menu.
 
