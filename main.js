@@ -12,22 +12,27 @@ const dockMenu = Menu.buildFromTemplate([
   {
     label: "Stop Sync",
     click() {
-      console.log("Stop Sync");
-      win.webContents.send("stop-sync");
+      sendStopSync();
     }
   }
 ]);
 
+//Win only stop sync option in thumbar
 function setThumbar() {
   win.setThumbarButtons([
     {
       tooltip: "Stop Sync",
       icon: path.join(__dirname, "assets/app-icon/icon-idel.png"),
       click() {
-        console.log("Stop Sync on Win");
+        sendStopSync();
       }
     }
   ]);
+}
+
+function sendStopSync() {
+  console.log("Stop Sync");
+  win.webContents.send("stop-sync");
 }
 
 function startApp() {
