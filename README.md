@@ -50,11 +50,11 @@ Notes:
 - The Cloudinary folder you set will be created under cloudydesktop folder in Cloudinary (and not under the root directory) so that there are less chances of messing up an existing folder.
 - When the sync is running, files deleted from your local folder will be deleted from the Cloudinary folder as well.
 
-Running:
+# start sync
 
 To start the sync operation click Sync Now, if all is well the button will show Sync On and the sync icon will keep rotating. After performing an initial sync the application will continue to monitor changes done to your local folder and it will update the Cloudinary folder with changes automatically. Once the Sync is on you can no longer change the path of the local or cloudinary folders. 
 
-Stopping:
+# stop sync
 
 To stop the Sync or to change folders call stop sync. On Mac it is in the dock menu and on Win it is in the taskbar thumbnail menu or exit the application. Closing the window, on Mac it leaves the app running and on Win the application exits. To close the app on Mac select quit on the dock menu.
 
