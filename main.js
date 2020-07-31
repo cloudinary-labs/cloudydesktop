@@ -2,8 +2,9 @@ const { app, Menu, BrowserWindow, ipcMain, dialog } = require("electron");
 
 let win = null;
 
+// checking the OS
 const isMac = (process.platform === "darwin");
-const isWin = (process.platform === "win");
+const isWin = (process.platform === "win32");
 
 //Mac only stop sync option in dock menu
 const dockMenu = Menu.buildFromTemplate([
