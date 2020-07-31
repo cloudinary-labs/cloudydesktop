@@ -2,6 +2,9 @@ const { app, Menu, BrowserWindow, ipcMain, dialog } = require("electron");
 
 let win = null;
 
+const isMac = (process.platform === "darwin");
+const isWin = (process.platform === "win");
+
 //Mac only stop sync option in dock menu
 const dockMenu = Menu.buildFromTemplate([
   {
@@ -35,10 +38,10 @@ function setThumbar() {
 
 function startApp() {
   createWindow();
-  if (process.platform === "darwin") {
+  if (isMac) {
     app.dock.setMenu(dockMenu);
   }
-  if (process.platform === "win") {
+  if (isWin) {
     setThumbar();
   }
 }
@@ -57,7 +60,7 @@ function createWindow() {
   win.loadURL(`file://${__dirname}/index.html`);
   // On Mac window close hide it and close it on quit
   win.on('close', (event) => {
-    if (!app.quitting) {
+    if (!app.quitting && isMac) {
       event.preventDefault();
       win.hide();
     }
@@ -70,13 +73,13 @@ app.on("will-navigate", function (event) {
 });
 // On Mac window close hide it and close it on quitn
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+  if (!isMac) {
     app.quit()
   }
 })
-app.on('activate', () => { win ? win.show() : createWindow()})
+app.on('activate', () => { win.show() })
 
-app.on('before-quit', () => app.quitting = true)
+app.on('before-quit', () => {if(isMac) {app.quitting = true}})
 
 ipcMain.handle("open-file-dialog", async (event) => {
   const buf = await dialog.showOpenDialog(win, {
