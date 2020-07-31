@@ -29,7 +29,7 @@ function setThumbar() {
     }
   ]);
 }
-
+// Calling Renderer to stop sync
 function sendStopSync() {
   console.log("Stop Sync");
   win.webContents.send("stop-sync");
@@ -57,7 +57,7 @@ function createWindow() {
   });
   //  win.webContents.openDevTools();
   win.loadURL(`file://${__dirname}/index.html`);
-  // On Mac window close hide it and close it on quit
+  // On Mac only, on window close hide it and close it on quit
   win.on('close', (event) => {
     if (!app.quitting && isMac) {
       event.preventDefault();
@@ -70,7 +70,7 @@ app.on("ready", startApp);
 app.on("will-navigate", function (event) {
   event.preventDefault();
 });
-// On Mac window close hide it and close it on quit
+// On Mac only, on window close hide it and close it on quit
 app.on('window-all-closed', () => {
   if (!isMac) {
     app.quit()
@@ -80,6 +80,7 @@ app.on('activate', () => { win.show() })
 
 app.on('before-quit', () => {if(isMac) {app.quitting = true}})
 
+//Handle Renderer requests
 ipcMain.handle("open-file-dialog", async (event) => {
   const buf = await dialog.showOpenDialog(win, {
     properties: ["openDirectory"],
