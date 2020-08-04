@@ -12,7 +12,7 @@ To confirm they are installed run (on Mac use terminal, on windows use powershel
 % git -v
 ```
 
-Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is required, to install it:
+Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is required for the application to work, to install it:
 - Install [Python](https://www.python.org) version 3.6 or later.
 - To install the Cloudinary CLI, run (on Mac use terminal, on windows use powershell):
 ```bash
