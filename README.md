@@ -3,7 +3,7 @@ Desktop application that uses Cloudinary's CLI to automatically sync a local fol
 # installing
 Requirements:
 
-[Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
+In order to compile the app on your machine [Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
 To confirm they are installed run (on Mac use terminal, on windows use powershell):
 ```bash
 # These commands should print the version of each process when they are installed
