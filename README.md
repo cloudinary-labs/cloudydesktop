@@ -3,7 +3,7 @@ Desktop application that uses Cloudinary's CLI to automatically sync a local fol
 # installing
 Requirements:
 
-[Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
+In order to compile the app on your machine [Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
 To confirm they are installed run (on Mac use terminal, on windows use powershell):
 ```bash
 # These commands should print the version of each process when they are installed
@@ -12,7 +12,7 @@ To confirm they are installed run (on Mac use terminal, on windows use powershel
 % git -v
 ```
 
-Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is required, to install it:
+Cloudinary [CLI](https://cloudinary.com/documentation/cloudinary_cli) is required for the application to work, to install it:
 - Install [Python](https://www.python.org) version 3.6 or later.
 - To install the Cloudinary CLI, run (on Mac use terminal, on windows use powershell):
 ```bash
