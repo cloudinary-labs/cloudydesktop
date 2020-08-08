@@ -113,6 +113,7 @@ function startSync() {
     .getElementById("myBtn")
     .innerHTML.replace(regex, "Sync Run");
   document.getElementById("myBtn").innerHTML = label;
+  document.getElementById("animateSvg").setAttribute("begin", "0s");
 }
 
 function stopSync(code) {
@@ -124,7 +125,6 @@ function stopSync(code) {
     getSyncStatus(code)
   );
   myBtn.innerHTML = label;
-  document.getElementById("animateSvg").setAttribute("begin", "0s");
   if(code == 0) {
     document.getElementById("mySvg").unpauseAnimations();
   }
