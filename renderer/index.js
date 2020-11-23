@@ -8,32 +8,43 @@ var watcher = require("./renderer/local.js");
 var appName = "appName";
 const keytarAccount = os.userInfo().username;
 
+/*
+This module runs the sync window and read and write the confgiration settings.
+It uses the local.js functions to perform the sync.
+*/
+
 const selectDirBtn = document.getElementById("selectDirectory");
 const saveKeysBtn = document.getElementById("saveKeys");
 const runSyncBtn = document.getElementById("myBtn");
+
 
 selectDirBtn.addEventListener("click", async function (event) {
   const data = await ipcRenderer.invoke("open-file-dialog");
   document.getElementById("localFolderPath").value = data;
 });
 
+
 saveKeysBtn.addEventListener("click", function (event) {
   saveForm();
 });
+
 
 runSyncBtn.addEventListener("click", function (event) {
   saveForm();
   start();
 });
 
+
 async function getAppName() {
   appName = await ipcRenderer.invoke("app-name");
 }
+
 
 ipcRenderer.on('stop-sync', function(event) {
   console.log("ipcRenderer stop-sync");
   watcher.stopWatcher();
 });
+
 
 function saveForm() {
   store.set("cloudName", document.getElementById("cloudName").value);
@@ -50,11 +61,13 @@ function saveConfigForm() {
   store.set("cloudinaryPath", document.getElementById("cloudinaryPath").value);
 }
 
+
 function readFields() {
   readApiKeys();
   readUserConfig();
   getAppName();
 }
+
 
 function readApiKeys() {
   document.getElementById("cloudName").value = store.get("cloudName");

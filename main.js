@@ -3,6 +3,11 @@ const path = require("path");
 
 let win = null;
 
+/*
+The main module creates the window that will run the sync.
+The main module also handles opening of the local file dialog window.
+*/
+
 // checking the OS
 const isMac = (process.platform === "darwin");
 const isWin = (process.platform === "win32");
@@ -34,6 +39,7 @@ function sendStopSync() {
   console.log("Stop Sync");
   win.webContents.send("stop-sync");
 }
+
 
 function startApp() {
   createWindow();

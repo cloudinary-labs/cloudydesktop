@@ -4,6 +4,11 @@ const rootCldDir = "cloudydesktop/";
 const cliMacPath = "/usr/local/bin";
 let watcher = null;
 
+/*
+This module listens on folder changes using chokidar.
+On local folder change it runs the CLI to perofmr sync
+*/
+
 function setEnvPath(data) {
   process.env.CLOUDINARY_URL =
     "cloudinary://" + data.apiKey + ":" + data.apiSecret + "@" + data.cldName;
@@ -76,6 +81,7 @@ function stopWatcher() {
   }
 }
 
+// Running Cloudinary CLI
 function runCliSync(localPath, cldPath) {
   if (!cliSyncRunning) {
     startSync();
