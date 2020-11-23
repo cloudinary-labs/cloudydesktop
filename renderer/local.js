@@ -6,7 +6,7 @@ let watcher = null;
 
 /*
 This module listens on local folder changes using chokidar.
-On local folder change it runs the CLI to perofmr sync
+On local folder change it runs the CLI to perform sync.
 */
 
 // Setting Cloudinary cloud name and API key and secret
@@ -169,6 +169,7 @@ function enableFolderSelection() {
   document.getElementById("cloudinaryPath").disabled = false;
 }
 
+// Declare the functions that will be used by the sunc window
 module.exports = {
   startWatcher,
   stopWatcher

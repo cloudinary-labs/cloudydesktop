@@ -4,8 +4,14 @@ const path = require("path");
 let win = null;
 
 /*
+
+Cloudydesktp is a Desktop application that uses Cloudinary's CLI 
+to automatically sync a local folder (and it subfolders) to a Cloudinary folder.
+For more infomration on Cloudinary CLI see https://cloudinary.com/documentation/cloudinary_cli
+
 The main module creates the window that will run the sync.
 The main module also handles opening of the local file dialog window.
+
 */
 
 // checking the OS
