@@ -5,10 +5,11 @@ const cliMacPath = "/usr/local/bin";
 let watcher = null;
 
 /*
-This module listens on folder changes using chokidar.
+This module listens on local folder changes using chokidar.
 On local folder change it runs the CLI to perofmr sync
 */
 
+// Setting Cloudinary cloud name and API key and secret
 function setEnvPath(data) {
   process.env.CLOUDINARY_URL =
     "cloudinary://" + data.apiKey + ":" + data.apiSecret + "@" + data.cldName;
@@ -20,6 +21,7 @@ function setEnvPath(data) {
   console.log("environment ", process.env.PATH);
 }
 
+// Running chokidar to listen on local folder changes
 function startWatcher(data) {
   var chokidar = require("chokidar");
   setEnvPath(data);
@@ -71,6 +73,7 @@ function startWatcher(data) {
     });
 }
 
+// Stop listening on local folder changes
 function stopWatcher() {
   if(watcher) {
       watcher.close().then(() => {
@@ -152,12 +155,14 @@ function getSyncStatus(code) {
   }
 }
 
+// Disable the option to change folder setting shown in the UI while the sync is running
 function disableFolderSelection() {
   document.getElementById("selectDirectory").disabled = true;
   document.getElementById("selectDirectory").style.backgroundColor = "DarkGray";
   document.getElementById("cloudinaryPath").disabled = true;
 }
 
+// Enable the option to change folder setting shown in the UI while the sync is not running
 function enableFolderSelection() {
   document.getElementById("selectDirectory").disabled = false;
   document.getElementById("selectDirectory").style.backgroundColor = "#0078ff";
