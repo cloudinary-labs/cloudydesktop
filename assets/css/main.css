@@ -21,74 +21,6 @@ body {
   margin: 0;
 }
 
-/* HTML5 display definitions
-   ========================================================================== */
-
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
-
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
@@ -135,6 +67,15 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+/* Forms
+   ========================================================================== */
+.box input[type="text"] {
+  width: 360px;
+}
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
 
 /**
  * 1. Correct color not being inherited.
@@ -271,6 +212,33 @@ fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
 }
 
 html {
@@ -683,124 +651,15 @@ input[type="radio"]:checked + label .radio-icon:before {
   visibility: visible;
 }
 
-#main {
-  position: relative;
-}
-
-#main:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.top-section {
-  position: relative;
-  overflow: hidden;
-}
-
-#header {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  padding: 9px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 5;
-  background: white;
-}
-
-#header.fixed-position {
-  background: rgba(255, 255, 255, 0.95);
-}
-
 .banner {
   background: #0078ff;
   background-image: linear-gradient(-180deg, #50a2fd 0%, #0078ff 80%);
   height: 80px;
 }
 
-#nav {
-  position: relative;
-  padding: 26px 0 26px;
-  overflow: hidden;
-}
-
-#footer {
-  padding: 29px 0;
-  background: #0e2f5a;
-  position: relative;
-  overflow: hidden;
-}
-
 @media (max-width: 1199px) {
   .container {
     max-width: 972px;
-  }
-}
-
-@media (max-width: 991px) {
-  .header-holder {
-    padding: 0 25px;
-  }
-
-  .logo {
-    width: 500px;
-  }
-
-  #nav {
-    padding: 25px 0;
-  }
-
-  .menu {
-    margin: 0 -5px;
-  }
-
-  .menu li {
-    padding: 0 5px;
-  }
-
-  .menu .text {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .adaptive-play {
-    font-size: 16px;
-  }
-
-  .footer-holder {
-    padding: 0 25px;
-  }
-}
-
-@media (max-width: 767px) {
-  .signup {
-    background: white;
-  }
-
-  #header {
-    padding: 11px 0 10px;
-  }
-
-  #nav {
-    padding: 25px 0 15px;
-  }
-
-  #footer {
-    padding: 31px 0;
-  }
-}
-
-@media (max-width: 479px) {
-  #nav {
-    padding: 20px 0 23px;
-  }
-
-}
-
-@media (max-width: 349px) {
-  .menu img {
-    height: 91px;
   }
 }
 
