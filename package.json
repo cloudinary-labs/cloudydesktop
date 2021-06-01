@@ -7,7 +7,8 @@
     "test": "electron .",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "pkgbuild": "pkgbuild --component out/cloudydesktop-darwin-x64/cloudydesktop.app --scripts scripts --sign 'Developer ID Installer: Cloudinary LTD (3TR999VVAS)' --install-location /Applications out/cloudypkg-signed.pkg"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "dependencies": {
     "child_process": "^1.0.2",
     "chokidar": "^3.4.0",
+    "dotenv": "^10.0.0",
     "electron-installer-dmg": "^3.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^5.2.0",
@@ -40,32 +42,6 @@
     "electron": "^9.3.2"
   },
   "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "assets/app-icon/icon"
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "cloudydesktop"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   }
 }

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pip3 install cloudinary-cli
+exit 0

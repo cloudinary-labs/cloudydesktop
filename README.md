@@ -1,7 +1,18 @@
 # cloudydesktop
 Desktop application that uses Cloudinary's CLI to automatically sync a local folder (and it subfolders) to a Cloudinary folder.
-# installing
-Requirements:
+
+# Installing
+
+For Mac:
+There is an installer available.
+Prequisites for the installation is having Python 3.6 or later. 
+You can install Python from https://www.python.org.
+Next, download cloudypkg-signed.pkg from the Releases section and double click to install.
+
+For Windows:
+You need to compile the code on your local machine as explained below.
+
+# Compiling
 
 In order to compile the app on your machine [Node](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) are required to be installed. 
 To confirm they are installed run (on Mac use terminal, on windows use powershell):
@@ -39,7 +50,7 @@ Cloudydesktop compile and run:
 # On Mac copy the .app in the folder to your Computer Applications folder
 ```
 
-Configuration:
+# Configuration:
 
 Run the Cloudydesktop application, set your Cloudinary account details (cloud name, API key and API secret) and save them.
 Select the local folder you want to upload to Cloudinary and the Cloudinary folder name in which files will be stored.
