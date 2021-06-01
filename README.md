@@ -7,7 +7,8 @@ For Mac:
 There is an installer available.
 Prequisites for the installation is having Python 3.6 or later. 
 You can install Python from https://www.python.org.
-Next, download cloudypkg-signed.pkg from the Releases section and double click to install.
+
+Next, download [cloudypkg-signed.pkg](https://github.com/cloudinary-labs/cloudydesktop/releases/download/v1.0-mac-alpha/cloudypkg-signed.pkg) from the Releases section and double click to install.
 
 For Windows:
 You need to compile the code on your local machine as explained below.
