@@ -8,7 +8,8 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "pkgbuild": "pkgbuild --component out/cloudydesktop-darwin-x64/cloudydesktop.app --scripts scripts --sign 'Developer ID Installer: Cloudinary LTD (3TR999VVAS)' --install-location /Applications out/cloudydesktop-darwin-x64/cloudypkg-signed.pkg"
+    "pkgbuild": "pkgbuild --component out/cloudydesktop-darwin-x64/cloudydesktop.app --scripts scripts --sign 'Developer ID Installer: Cloudinary LTD (3TR999VVAS)' --install-location /Applications out/cloudydesktop-darwin-x64/cloudypkg-signed.pkg",
+    "productbuild": "productbuild --distribution out/product.dist --resource out/cloudydesktop-darwin-x64/resources --package-path out/cloudydesktop-darwin-x64/packages --sign 'Developer ID Installer: Cloudinary LTD (3TR999VVAS)' out/cloudydesktop-darwin-x64/cloudydesktop-sign.pkg"
   },
   "repository": {
     "type": "git",
