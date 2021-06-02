@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-script minSpecVersion="1.000000">
+    <title>Cloudydesktop</title>
+    <welcome file="welcome.html" mime-type="text/html" />
+    <conclusion file="conclusion.html" mime-type="text/html" />
+    <choices-outline>
+        <line choice="Cloudydesktop"/>
+    </choices-outline>
+    <choice id="Cloudydesktop" title="Cloudydesktop">
+        <pkg-ref id="cloudypkg">cloudypkg-signed.pkg</pkg-ref>
+    </choice>
+</installer-script>
