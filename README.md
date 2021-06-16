@@ -5,10 +5,11 @@ Desktop application that uses Cloudinary's CLI to automatically sync a local fol
 
 For Mac:
 There is an installer available.
-Prequisites for the installation is having Python 3.6 or later. 
-You can install Python from https://www.python.org.
+Prequisites for the installation are:
+1. Having Python 3.6 or later. You can install Python from https://www.python.org.
+2. Make sure that in your Mac System Preferences-> Security & Privacy-> General you select the option Allow Apps downloaded from: AppStore and identified developers
 
-Next, download [cloudypkg-signed.pkg](https://github.com/cloudinary-labs/cloudydesktop/releases/download/v1.0-mac-alpha/cloudypkg-signed.pkg) from the Releases section and double click to install.
+Next, download [cloudydesktop-signed.pkg](https://github.com/cloudinary-labs/cloudydesktop/releases/download/v1.0-mac-alpha/cloudydesktop-sign.pkg) from the Releases section and double click to install.
 
 For Windows:
 You need to compile the code on your local machine as explained below.
