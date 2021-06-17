@@ -92,6 +92,7 @@ function runCliSync(localPath, cldPath) {
       "sync",
       "--push",
       "--force",
+      "--keep-unique",
       localPath,
       (rootCldDir + cldPath)],
       {shell: process.platform == 'win32'});
