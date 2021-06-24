@@ -3,3 +3,4 @@ out
 npm-debug.log
 .DS_Store
 .env
+packages
