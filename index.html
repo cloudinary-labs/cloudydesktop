@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="banner" style="background-color: #0071ba;">
+  <div class="banner">
     <div class="windowpad">
       <img src="assets/img/cloudinary_logo.png" height="55px" width="65px" align="left" style="padding-right: 10px;" />
       <h1>Cloudydesktop</h1>
@@ -19,7 +19,7 @@
 
   <div class="windowpad">
     <div class="main-area">
-      <div class="nobox">
+      <div class="box">
         <h3>Account Details</h3>
 
         <div class="item">
@@ -56,7 +56,7 @@
           <input class="input-field" type="password" id="apiSecret" value="" type="text" />
         </div>
         <div class="item" align="left">
-          <button type="button" id="saveKeys" class="md-btn md-btn-raised md-btn-ripple md-btn-orange">
+          <button type="button" id="saveKeys" class="md-btn-secondary md-btn-raised md-btn-ripple md-btn-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none" />
               <path
@@ -76,8 +76,8 @@
           <div class="label">Local path:</div>
           <input class="input-field" id="localFolderPath" type="text" disabled/>
         </div>
-        <div class="item">
-          <button class="md-btn md-btn-ripple" type="button" id="selectDirectory">
+        <div class="item folder">
+          <button class="md-btn-secondary md-btn-ripple" type="button" id="selectDirectory">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
               <path d="M0 0h24v24H0z" fill="none" />
@@ -87,18 +87,18 @@
         </div>
         <div class="item">
           <div class="label">
-            Cloudinary path: (will be located at cloudydesktop/)
+            Cloudinary path: <i class="info">(will be located at cloudydesktop/)</i>
           </div>
           <input class="input-field" id="cloudinaryPath" type="text" />
         </div>
         <div class="item">
-          <div class="label">
-            Mirror local folder to a Cloudinary folder<br> 
+          <p class="info">
+            Mirror local folder to a Cloudinary folder<br>
             (keep unique files, deleted from local, in Cloudinary folder).
-          </div>
+          </p>
         </div>
         <div class="item">
-          <button id="myBtn" type="button" npm class="md-btn md-btn-ripple">
+          <button id="myBtn" type="button" npm class="md-btn-primary md-btn-ripple">
             <svg xmlns="http://www.w3.org/2000/svg" id="mySvg" width="24" height="24" viewBox="0 0 24 24">
               <path
                 d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
