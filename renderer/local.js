@@ -159,14 +159,14 @@ function getSyncStatus(code) {
 // Disable the option to change folder setting shown in the UI while the sync is running
 function disableFolderSelection() {
   document.getElementById("selectDirectory").disabled = true;
-  document.getElementById("selectDirectory").style.backgroundColor = "DarkGray";
+  document.getElementById("selectDirectory").style.backgroundColor = "#90A0B3";
   document.getElementById("cloudinaryPath").disabled = true;
 }
 
 // Enable the option to change folder setting shown in the UI while the sync is not running
 function enableFolderSelection() {
   document.getElementById("selectDirectory").disabled = false;
-  document.getElementById("selectDirectory").style.backgroundColor = "#0078ff";
+  document.getElementById("selectDirectory").style.backgroundColor = "#C6D1DB";
   document.getElementById("cloudinaryPath").disabled = false;
 }
 

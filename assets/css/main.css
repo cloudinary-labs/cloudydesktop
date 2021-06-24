@@ -252,14 +252,14 @@ select {
  *    `input` and others.
  */
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  width:350px;
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
+ button,
+ html input[type="button"],
+ input[type="reset"],
+ input[type="submit"] {
+   width: 100%;
+   -webkit-appearance: button; /* 2 */
+   cursor: pointer; /* 3 */
+ }
 
 /**
  * Re-set default cursor for disabled elements.

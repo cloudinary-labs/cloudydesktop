@@ -9,12 +9,6 @@ module.exports = {
             "hardened-runtime": true,
             "entitlements": "entitlements.plist",
             "entitlements-inherit": "entitlements.plist"
-          },
-          "osxNotarize": {
-            "appBundleId": "com.cloudinary-labs.cloudydesktop",
-            "appleId": process.env.APPLE_ID,
-            "appleIdPassword": process.env.APPLE_ID_PASSWORD,
-            "ascProvider": "3TR999VVAS"
           }
       },
       "makers": [

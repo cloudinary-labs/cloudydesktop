@@ -59,7 +59,7 @@ function startApp() {
 function createWindow() {
   win = new BrowserWindow({
     width: 750,
-    height: 550,
+    height: 620,
     resizable: false,
     webPreferences: {
       nodeIntegration: true,
