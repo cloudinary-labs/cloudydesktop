@@ -12,7 +12,8 @@
     "productbuild": "productbuild --distribution build/product.dist --resource build/resources --package-path packages --sign 'Developer ID Installer: Cloudinary LTD (3TR999VVAS)' out/make/zip/darwin/x64/cloudydesktop-sign.pkg",
     "spctl": "spctl -a -vv out/make/zip/darwin/x64/cloudydesktop.app",
     "spctl-pkg": "spctl -a -vvv -t install out/make/zip/darwin/x64/cloudydesktop-sign.pkg",
-    "notarize":"xcrun altool --notarize-app --primary-bundle-id com.cloudinary-labs.cloudydesktop-pkg -f out/make/zip/darwin/x64/cloudydesktop-sign.pkg --asc-provider 3TR999VVAS --password @keychain:CLOUDYDESKTOP_APPLE_ID_PASSWORD"
+    "notarize":"xcrun altool --notarize-app --primary-bundle-id com.cloudinary-labs.cloudydesktop-pkg -f out/make/zip/darwin/x64/cloudydesktop-sign.pkg --asc-provider 3TR999VVAS --password @keychain:CLOUDYDESKTOP_APPLE_ID_PASSWORD",
+    "notarize-info":"xcrun altool --notarization-info 'Your-Request-UUID' --password '@keychain:CLOUDYDESKTOP_APPLE_ID_PASSWORD'"
   },
   "repository": {
     "type": "git",
