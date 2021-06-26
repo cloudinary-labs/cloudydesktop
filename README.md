@@ -61,7 +61,8 @@ Notes:
 
 - Files are uploaded as public to Cloudinary.
 - The Cloudinary folder you set will be created under cloudydesktop folder in Cloudinary (and not under the root directory) so that there are less chances of messing up an existing folder.
-- When the sync is running, files deleted from your local folder will be deleted from the Cloudinary folder as well.
+- When the sync is running, a file that is updated (with the same file name) on your local directory will be updated in the Cloudinary folder as well. In case you want to keep historic versions of updated files you need to enable backup on your Cloudinary account.
+- When the sync is running, unique files deleted from your local directory, won't be deleted and will be kept in the Cloudinary folder.
 
 # start sync
 
