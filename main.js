@@ -53,6 +53,7 @@ function startApp() {
   }
   if (isWin) {
     setThumbar();
+    win.removeMenu();
   }
 }
 
