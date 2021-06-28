@@ -36,6 +36,13 @@ function setThumbar() {
       click() {
         sendStopSync();
       }
+    },
+    {
+      tooltip: "Dev Tools",
+      icon: path.join(__dirname, "assets/app-icon/icon-gear.png"),
+      click() {
+        win.webContents.openDevTools();
+      }
     }
   ]);
 }
