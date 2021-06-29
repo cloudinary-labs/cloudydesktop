@@ -72,3 +72,7 @@ To start the sync operation click Sync Now, if all is well the button will show 
 
 To stop the Sync or to change folders call stop sync. On Mac it is in the dock menu and on Win it is in the taskbar thumbnail menu or exit the application. Closing the window, on Mac it leaves the app running and on Win the application exits. To close the app on Mac select quit on the dock menu.
 
+# Troubleshooting
+
+In case you want to see more details on a Sync Error message or to see which files are uploaded, you can see that in the Dev Tools console. To open the Dev Tools, on Mac hit <Cmd, Opt, I> when the app is in focus and on Windows it is in the taskbar thumbnail menu, click the gear icon that will show when you hover on the taskbar app icon.
+
